@@ -1,0 +1,29 @@
+class Vehicle {
+  String brand;
+  double speed;
+
+  Vehicle(this.brand, this.speed);
+
+  void describe() {
+    print("Brand: $brand");
+    print("Speed: $speed");
+  }
+}
+
+class Car extends Vehicle {
+  int doors;
+
+  Car(String brand, double speed, this.doors)
+      : super(brand, speed);
+
+  @override
+  void describe() {
+    super.describe();
+    print("Doors: $doors");
+  }
+}
+
+void main() {
+  Car car = Car("Toyota", 180, 4);
+  car.describe();
+}
