@@ -1,0 +1,26 @@
+class Student {
+  String _name;
+  double _grade;
+
+  Student(this._name, this._grade);
+
+  String get name => _name;
+
+  double get grade => _grade;
+
+  set grade(double value) {
+    if (value >= 0 && value <= 100) {
+      _grade = value;
+    } else {
+      print("Invalid grade!");
+    }
+  }
+}
+
+void main() {
+  Student s = Student("Ali", 90);
+
+  s.grade = 95;
+  print(s.name);
+  print(s.grade);
+}
